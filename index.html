@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>LBuriti Elegance</title>
+<link rel ="icon" href="./WhatsApp Image 2026-01-26 at 11.38.00.jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#fff;
+  color:#333;
+}
+
+/* HEADER */
+header{
+  background:#550505;
+  padding:20px 100px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+header img{
+  height:110px;
+}
+
+nav a{
+  color:white;
+  margin-left:25px;
+  text-decoration:none;
+  font-size:20px;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  width:0%;
+  height:2px;
+  background:white;
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  transition:.4s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* SECTIONS FULL PAGE */
+section{
+
+  padding:100px 40px;
+  text-align:center;
+  scroll-margin-top:80px;
+}
+
+section.aparecer{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* HERO  iniciooooo */
+
+#inicio .card{
+    
+  aspect-ratio:1 / 1;
+  width:240px;
+  background:#fcf6f6;
+  border:2px solid #4b0d18;
+  border-radius:20px;
+  padding:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero{
+   margin-bottom: none;
+  min-height:30vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:120px 20px;
+  background-color: #fcf6f6;
+}
+
+.hero h1{
+  margin-top: 25px;
+  font-family:'Playfair Display',serif;
+  font-size:65px;
+  color: #4b0d18;
+}
+
+.hero p{
+  font-size:24px;
+  margin-top:5px;
+}
+
+.colecao{
+  display:inline-block;
+  margin-top:70px;
+  margin-bottom:50px ;
+  background:#4b0d18;
+  color:#ffffff;
+  padding:10px 25px;
+  border-radius:50px;
+  text-decoration:none;
+  font-size:18px;
+  transition:.3s;
+}
+
+.colecao:hover{
+  transform:scale(1.1);
+  background:rgb(46, 18, 18);
+}
+
+.fundov{
+    background: #fcf6f6;
+}
+
+.btn:hover{
+  background:#4b0d18;
+  color:white;
+  transform:scale(1.08);
+}
+
+/* TITULOS */
+section h2{
+  font-family:'Playfair Display',serif;
+  font-size:45px;
+  color:#4b0d18;
+  margin-bottom:40px;
+}
+
+/* SOBRE */
+.sobre{
+    margin-bottom: 60px;
+  display:flex;
+  gap:60px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  padding: 10px 20px;
+}
+
+.sobre img{
+  width:360px;
+  height:360px;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
+  transition:.4s;
+}
+
+.sobre img:hover{
+  transform:scale(1.08);
+}
+
+.sobre p{
+  max-width:550px;
+  font-size:27px;
+}
+.fundoS {
+    background: #fcf6f6;
+}
+
+/* PRODUTOS */
+.produtos{
+  
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.card{
+  background:white;
+  border-radius:25px;
+  padding:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+  transition:.4s;
+  cursor:pointer;
+}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.05);
+}
+
+.card img{
+  width:100%;
+  border-radius:20px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  font-size:20px;
+}
+
+.card p{
+  font-size:18px;
+  color:#4b0d18;
+  font-weight:bold;
+}
+
+/* FUNDO */
+.fundo{
+  background:#fcf6f6;
+}
+
+/* CONTATO */
+#contato{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+form{
+  max-width:450px;
+  margin:auto;
+}
+
+input,textarea{
+  width:100%;
+  padding:15px;
+  margin:12px 0;
+  border-radius:12px;
+  border:1px solid #ccc;
+  font-size:16px;
+}
+
+button{
+  background:#4b0d18;
+  color:white;
+  padding:15px;
+  width:100%;
+  border:none;
+  border-radius:12px;
+  font-size:18px;
+  transition:.3s;
+}
+
+button:hover{
+  background:black;
+}
+
+.enviar{
+  display:block;
+  width:100%;
+  margin-top:15px;
+  background:#4b0d18;
+  color:white;
+  padding:15px;
+  border-radius:12px;
+  text-decoration:none;
+  font-size:18px;
+  text-align:center;
+  transition:.4s;
+}
+
+.enviar:hover{
+  background:#4b0d18;
+  transform:scale(1.1);
+}
+
+.whats{
+  display:block;
+  width:100%;
+  margin-top:15px;
+  background:#4b0d18;
+  color:white;
+  padding:15px;
+  border-radius:12px;
+  text-decoration:none;
+  font-size:18px;
+  text-align:center;
+  transition:.4s;
+}
+
+.whats:hover{
+  background:rgb(32, 1, 1);
+  transform:scale(1.1);
+}
+
+.insta{
+  display:block;
+  width:100%;
+  margin-top:15px;
+  background: rgb(68, 3, 3) ;
+  color:white;
+  padding:15px;
+  border-radius:12px;
+  text-decoration:none;
+  font-size:18px;
+  text-align:center;
+  transition:.4s;
+}
+
+.insta:hover{
+  transform:scale(1.05);
+  filter:brightness(1.1);
+}
+
+/* FOOTER */
+footer{
+  background:#4b0d18;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+  .hero h1{
+    font-size:40px;
+  }
+  section {
+    padding: 50px 20px;
+  }
+}
+
+.caixa-contato{
+  background:white;
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+  max-width:450px;
+  width:100%;
+  border:2px solid #4b0d18;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.fundob{
+  background-color: #fcf6f6;
+}
+
+.fundoc{
+  background-color: #fcf6f6;
+}
+
+/* ===== MODAL (ADICIONADO) ===== */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+  z-index:3000;
+}
+
+.modal-conteudo{
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  max-width:90%;
+  max-height:90%;
+  text-align:center;
+  position:relative;
+}
+
+.modal-conteudo img{
+  max-width:100%;
+  max-height:60vh;
+  border-radius:15px;
+}
+
+.fechar{
+  position:absolute;
+  top:10px;
+  right:20px;
+  font-size:45px;
+  cursor:pointer;
+}
+
+.btn-comprar{
+  display:inline-block;
+  margin-top:15px;
+  background:#4b0d18;
+  color:white;
+  padding:12px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:18px;
+  transition:.3s;
+}
+
+.btn-comprar:hover{
+  background:black;
+  transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="./WhatsApp Image 2026-01-26 at 11.38.00.jpeg" alt="Logo">
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#vestidos">Vestidos</a>
+    <a href="#bolsas">Bolsas</a>
+    <a href="#blusas">Blusas</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <h1>Moda Feminina de Luxo</h1>
+  <p>Elegância que veste você</p>
+  <a href="#vestidos" class="colecao">Ver coleção</a>
+
+  <div class="produtos" style="margin-top:60px;">
+    <div class="card">
+      <h3>Elegância, Modéstia e Estilo</h3>
+      <p>Moda evangélica e juvenil</p>
+      <h1></h1>
+    </div>
+
+    <div class="card">
+      <h3>Enviamos para todo o Brasil</h3>
+      <p>Entrega rápida e segura</p>
+    </div>
+
+    <div class="card">
+      <h3>Pronta entrega</h3>
+      <p>Indaiatuba e Itapecerica da Serra</p>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" class="fundoS">
+  <div class="sobre">
+    <div class="foto-container">
+      <img src="leticia foto.jpg" alt="Fundadora">
+      <h1 class="nome-fundadora">Letícia Buriti</h1>
+    </div>
+    <div>
+      <h2>Sobre mim</h2>
+      <p>
+        Sou a fundadora da LBuriti Elegance, apaixonada por moda e por proporcionar
+        uma experiência única de sofisticação e confiança para cada mulher.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="vestidos" class="fundov">
+  <h2>Vestidos</h2>
+  <div class="produtos">
+    <div class="card" onclick="abrirModal('./vestido1.jpeg','Vestido Serena','150')"><img src="./vestido1.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido2.jpeg','Vestido Serena','150')"><img src="./vestido2.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido3.jpeg','Vestido Serena','150')"><img src="./vestido3.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido 4.jpeg','Vestido Serena','150')"><img src="./vestido 4.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido5.jpeg','Vestido Serena','150')"><img src="./vestido5.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido6.jpeg','Vestido Serena','150')"><img src="./vestido6.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido10.jpeg','Vestido Serena','150')"><img src="./vestido10.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido11.jpeg','Vestido Serena','150')"><img src="./vestido11.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido9.jpeg','Vestido Jade','150')"><img src="./vestido9.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido7.jpeg','Vestido Jade','150')"><img src="./vestido7.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido8.jpeg','Vestido Jade','150')"><img src="./vestido8.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido12.jpeg','Vestido Jade','150')"><img src="./vestido12.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido13.jpeg','Vestido Jade','150')"><img src="./vestido13.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido14.jpeg','Vestido Jade','150')"><img src="./vestido14.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido15.jpeg','Vestido Jade','150')"><img src="./vestido15.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido16.jpeg','Vestido Jade','150')"><img src="./vestido16.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+
+  </div>
+</section>
+
+<section id="bolsas" class="fundob">
+  <h2>Bolsas</h2>
+  <div class="produtos">
+    <div class="card" onclick="abrirModal('./bolsa5.jpeg','Bolsa 1','100')"><img src="./bolsa5.jpeg"><h3>Bolsa 1</h3><p>R$ 100</p></div>
+    <div class="card" onclick="abrirModal('./bolsa2.jpeg','Bolsa 2','100')"><img src="./bolsa2.jpeg"><h3>Bolsa 2</h3><p>R$ 100</p></div>
+    <div class="card" onclick="abrirModal('./bolsa3.jpeg','Bolsa 3','100')"><img src="./bolsa3.jpeg"><h3>Bolsa 3</h3><p>R$ 100</p></div>
+    <div class="card" onclick="abrirModal('./bolsa4.jpeg','Bolsa 4','150')"><img src="./bolsa4.jpeg"><h3>Bolsa 4</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./bolsa1.jpeg','Bolsa 5','120')"><img src="./bolsa1.jpeg"><h3>Bolsa 5</h3><p>R$ 120</p></div>
+    <div class="card" onclick="abrirModal('./bolsa6.jpeg','Bolsa 6','150')"><img src="./bolsa6.jpeg"><h3>Bolsa 6</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./bolsa7.jpeg','Bolsa 7','120')"><img src="./bolsa7.jpeg"><h3>Bolsa 7</h3><p>R$ 120</p></div>
+  </div>
+</section>
+
+<section id="blusas" class="fundob">
+  <h2>Blusas</h2>
+  <div class="produtos">
+    <div class="card" onclick="abrirModal('./blusa1.jpeg','Blusa 1','30')"><img src="./blusa1.jpeg"><h3>Blusa 1</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa2.jpeg','Blusa 2','30')"><img src="./blusa2.jpeg"><h3>Blusa 2</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa3.jpeg','Blusa 3','30')"><img src="./blusa3.jpeg"><h3>Blusa 3</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa4.jpeg','Blusa 4','30')"><img src="./blusa4.jpeg"><h3>Blusa 4</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa5.jpeg','Blusa 5','30')"><img src="./blusa5.jpeg"><h3>Blusa 5</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa6.jpeg','Blusa 6','30')"><img src="./blusa6.jpeg"><h3>Blusa 6</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa9.jpeg','Blusa 6','30')"><img src="./blusa9.jpeg"><h3>Blusa 6</h3><p>R$ 30</p></div>
+
+  </div>
+</section>
+
+<section id="contato" class="fundoc">
+  <div class="caixa-contato">
+    <h2>Contato</h2>
+
+    <form onsubmit="enviarWhats(event)">
+      <input id="nome" placeholder="Seu nome" required>
+      <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+      <button class="enviar">Enviar no WhatsApp</button>
+    </form>
+
+    <a class="whats" href="https://wa.me/5511994018861" target="_blank">
+      Falar direto no WhatsApp
+    </a>
+    <a class="insta" href="https://instagram.com/lburitielegance" target="_blank">
+      Ir para o Instagram
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 LBuriti Elegance
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal" onclick="fecharModal()">
+  <div class="modal-conteudo" onclick="event.stopPropagation()">
+    <span class="fechar" onclick="fecharModal()">×</span>
+    <img id="modal-img">
+    <h3 id="modal-nome"></h3>
+    <p id="modal-preco"></p>
+    <a id="btn-whats" class="btn-comprar" target="_blank">Comprar pelo WhatsApp</a>
+  </div>
+</div>
+
+<script>
+function enviarWhats(e){
+  e.preventDefault();
+  let nome=document.getElementById("nome").value;
+  let msg=document.getElementById("mensagem").value;
+  let numero="5511994018861";
+  let texto=`Olá, meu nome é ${nome}. ${msg}`;
+  let url=`https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+  window.open(url,"_blank");
+}
+
+const sections=document.querySelectorAll("section");
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("aparecer");
+    }
+  });
+},{threshold:0.2});
+
+sections.forEach(sec=>observer.observe(sec));
+
+let numeroWhats = "5511994018861";
+
+function abrirModal(img,nome,preco){
+  document.getElementById("modal").style.display="flex";
+  document.getElementById("modal-img").src=img;
+  document.getElementById("modal-nome").innerText=nome;
+  document.getElementById("modal-preco").innerText="R$ " + preco;
+
+  let mensagem = `Olá, quero comprar o ${nome} por R$ ${preco}`;
+  let link = `https://wa.me/${numeroWhats}?text=${encodeURIComponent(mensagem)}`;
+  document.getElementById("btn-whats").href = link;
+}
+
+function fecharModal(){
+  document.getElementById("modal").style.display="none";
+}
+</script>
+
+</body>
+</html>
