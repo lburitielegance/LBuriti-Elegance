@@ -207,6 +207,8 @@ section h2{
 
 .card img{
   width:100%;
+  height:300px;       /* altura fixa pra todas */
+  object-fit:cover;  /* corta sem distorcer */
   border-radius:20px;
   margin-bottom:10px;
 }
@@ -522,6 +524,8 @@ footer{
     <div class="card" onclick="abrirModal('./blusa5.jpeg','Blusa Luna','30')"><img src="./blusa5.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
     <div class="card" onclick="abrirModal('./blusa6.jpeg','Blusa Luna','30')"><img src="./blusa6.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
     <div class="card" onclick="abrirModal('./blusa9.jpeg','Blusa Luna','30')"><img src="./blusa9.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa25.jpeg','Blusa Luna','30')"><img src="./blusa25.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
+
     <div class="card" onclick="abrirModal('./blusa10.jpeg','Blusa Aurora','30')"><img src="./blusa10.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
     <div class="card" onclick="abrirModal('./blusa11.jpeg','Blusa Aurora','30')"><img src="./blusa11.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
     <div class="card" onclick="abrirModal('./blusa12.jpeg','Blusa Aurora','30')"><img src="./blusa12.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
@@ -620,6 +624,7 @@ function fecharModal(){
 
 </body>
 </html>
+
 
 
 
